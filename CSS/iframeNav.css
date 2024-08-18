@@ -21,6 +21,7 @@ nav {
     font-variation-settings:
       "wdth" 100;
     font-size: clamp(1rem, 1vw, 2rem);
+    z-index: 500;
 }
 
 ul {

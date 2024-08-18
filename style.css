@@ -100,6 +100,7 @@ main {
 
 iframe {
     border: none;
+    z-index: 500;
 }
 
 .accent {
