@@ -5,6 +5,11 @@
     --fc-prim: white;
 }
 
+:root[data-theme="light"] {
+    --bg-prim: white;
+    --fc-prim: black;
+}
+
 nav {
     background-color: var(--bg-prim);
     color: var(--fc-prim);
@@ -32,4 +37,28 @@ ul {
 a {
     color: var(--fc-prim);
     text-decoration: none;
+}
+
+.toggle {
+    position: absolute;
+    right: 20px;
+    background-color: red;
+    width: 80px;
+    height: 40px;
+    border-radius: 90px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+input#themeToggle {
+    display: none;
+}
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    background-color: blue;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
 }

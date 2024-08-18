@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --bg-prim: rgb(30, 30, 30);
-    --fc-prim: white;
+  --bg-prim: rgb(30, 30, 30);
+  --fc-prim: white;
+}
+
+:root[data-theme="light"] {
+    --bg-prim: white;
+    --fc-prim: black;
 }
 
 footer {

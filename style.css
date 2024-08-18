@@ -7,10 +7,20 @@
       "wdth" 100;
 
     --bg-prim: rgb(30, 30, 30);
+    --bg-nav: rgb(20, 20, 20);
     --bg-sec: rgb(40, 40, 40);
     --fc-prim: white;
 
     --accent: rgb(141, 255, 11);
+}
+
+:root[data-theme="light"] {
+    --bg-prim: white;
+    --bg-nav: rgb(240, 240, 240);
+    --bg-sec: rgb(240, 240, 240);
+    --fc-prim: black;
+
+    --accent: rgb(38, 97, 11);
 }
 
 body {
@@ -107,4 +117,68 @@ iframe {
     color: var(--accent);
     text-decoration: underline;
     font-style: italic;
+}
+
+nav {
+    background-color: var(--bg-nav);
+    color: var(--fc-prim);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+
+    font-size: clamp(1rem, 1vw, 2rem);
+    z-index: 500;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: var(--fc-prim);
+    text-decoration: none;
+}
+
+.toggle {
+    position: absolute;
+    right: 20px;
+    background-color: var(--bg-sec);
+    outline: 2px solid var(--bg-prim);
+    width: 80px;
+    height: 40px;
+    border-radius: 90px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input#themeToggle {
+    display: none;
+}
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    background-color: var(--bg-prim);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+footer {
+    background-color: var(--bg-prim);
+    color: var(--fc-prim);
+    font-size: clamp(0.8rem, 0.75vw, 1.5rem);
+
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+}
+
+:root[data-theme="light"] .toggle::after {
+    transform: translateX(40px);
 }
